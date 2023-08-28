@@ -49,12 +49,12 @@ This is the palce where the user through typing the predefine letter can choose 
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
 
-## 3 Menu.help(h):
+## 3.1 Menu.help(h):
 This is the place prepered for the user_manual.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/379798ca-11e4-42f9-80ce-8b1bdf3a5291)
 
-## 3 Menu.Check_off_habit(c):
+## 3.2 Menu.Check_off_habit(c):
 In this part user have the possibility to check of anyfrom the activ habits that hasn't been not yet completed for this day or this week. Logic hier is based on two variables: 'Active'(boolean) and 'Periodicity'('daily' or 'weekly'), f.e. if an activ habit with weekly periodicity have allredy check_off mark in the database at monday it will not appera in the list of habits to completed since next week.  
 
  operation.list_of_weekly_habits_with_check_offs_this_week(database, not_completed_habits_week)
@@ -68,6 +68,31 @@ In this part user have the possibility to check of anyfrom the activ habits that
                     # in a separate line
                     else:
                         pass
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/95d00d33-fd34-4205-aeef-2f7e2539b239)
+
+## 3.3 Menu.Add_new_habit(n):
+This is the place to add new habits to already existing default habits in database
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f875d8e4-0d04-4735-b829-9379139e86b9)
+
+## 3.4 Menu.Analytics(n):
+User can choose betwenn two predefind options:
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/fc1f976a-8cb0-446d-a4e4-9df20a15ef38)
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/8b15a0e5-339d-4608-a211-a71c399f5517)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
