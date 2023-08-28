@@ -83,6 +83,17 @@ User can choose betwenn two predefind options:
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/68de086f-fe01-4290-bfd5-aba0054bcee8)
 
+## 3.5 Menu.Settings(s):
+Hier user can delete(deactivate) existing habits by choosing them from the list. After deactivation the parameter 'Active' in database will be changed from True to false. The second optionin this menu is created to change last log_out_time. This option is only for testing purpose, f.e. to set date in the past and shown not completed habits in main menu.  
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f89c36ff-1ae4-4a45-ab2e-53a063c40050)
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7ffd61f0-0d79-40ae-90b5-ac5eeeb8ea0b)
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/32f9c44c-f2f9-4fc3-bb30-29815d919a90)
+
+
+
+
+
 
 
 
