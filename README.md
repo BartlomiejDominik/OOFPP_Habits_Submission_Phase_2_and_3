@@ -21,7 +21,21 @@ In some points of this process there is a interaction(pressing enter, to go forw
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c)
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981)
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981
+
+With the 'assert' command the parts of the code are checked. 
+
+# creat, based on five default habits, the dataset with random check_offs for last 28 days(four weeks).
+            print('\n########## Test 2. Creating the dataset with random check_offs for last 28 days(four weeks) '
+                  '##########\n')
+            time.sleep(3)
+            dataset = Set()
+            dataset.test_function(model.read_from_json_file(database), database)
+            result_habits = model.read_from_json_file(database)
+            # check if random check_off's were added to a database
+            for habit in result_habits:
+                assert len(habit['Check_offs']) is not None
+            print('\n########## Test 2. Successfully completed! ##########\n')
 
 ## 2.2 Launch.menu:
 During the first run und after compleating the tests, or discard it at the begining, the application will cheeck if database and log_out file are existing. If not these will be created wit five predefined habits. Last log_out_date ist set to be to days earlier to present how user notifiactions about not completed habits are working. Those two steps are happening only if any of the file is missing.
