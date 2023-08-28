@@ -45,7 +45,7 @@ During the first run und after compleating the tests, or discard it at the begin
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/92bc2d52-061e-4698-8996-5a51f037c34c)
 
 ## 3 Menu:
-This is the palce where the user through typing the predefine letter can choose one from avaliable functions.
+This is the palce where the user through typing the predefine letter can choose one from avaliable functions. Based of the both files 'databse.json' and 'log_out_time.json' (set as default two days earlier fot the presentation purpose) user get prompt in the upper part of menu those habits there are not completed since last log_out. If last log_out was earlier the same day that will not count and this part of menu will be empty. 
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
 
