@@ -55,6 +55,19 @@ This is the place prepered for the user_manual.
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/379798ca-11e4-42f9-80ce-8b1bdf3a5291)
 
 ## 3 Menu.Check_off_habit(c):
+In this part user have the possibility to check of anyfrom the activ habits that hasn't been not yet completed for this day or this week. Logic hier is based on two variables: 'Active'(boolean) and 'Periodicity'('daily' or 'weekly'), f.e. if an activ habit with weekly periodicity have allredy check_off mark in the database at monday it will not appera in the list of habits to completed since next week.  
+
+ operation.list_of_weekly_habits_with_check_offs_this_week(database, not_completed_habits_week)
+                # search in a 'habits' database and print all the habits that have to be done weekly
+                print('------------------------------\nHabits on a weekly basis:\n')
+                for habit in not_completed_habits_week:  # habits
+                    if habit['Periodicity'] == "weekly" and habit['Active'] == True:
+                        max_counter += 1
+                        daily_and_weekly_habits.append(habit)
+                        print(max_counter, habit['Task'], "-", habit['Specification'])  # print each item from the list
+                    # in a separate line
+                    else:
+                        pass
 
 
 
