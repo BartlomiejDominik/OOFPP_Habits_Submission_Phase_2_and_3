@@ -15,7 +15,18 @@ Because of the early stage of developing of this application user after launchin
 
 ## 2.1 Launch.test:
 User shoul type 't' and press enter to launch test run. After this there will propmt a messages with the information according to stage of this proces and user will be shown the sample data.
-In some points of this process there is a interaction(pressing enter, to go forward) from the user site needed. This functionality sholud allow to during the testing process 
+In some points of this process there is a interaction(pressing enter, to go forward) from the user site needed. This functionality sholud allow to track the progges during the testing process.
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9)
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c)
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981)
+
+
+
+
+
 
 
 
