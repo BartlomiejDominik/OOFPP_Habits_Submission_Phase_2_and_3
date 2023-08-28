@@ -82,7 +82,7 @@ This is the place to add new habits to already existing default habits in databa
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f875d8e4-0d04-4735-b829-9379139e86b9)
 
-## 4.4 Menu.Analytics(n):
+## 4.4 Menu.Analytics(a):
 User can choose betwenn two predefind options:
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/fc1f976a-8cb0-446d-a4e4-9df20a15ef38)
 
