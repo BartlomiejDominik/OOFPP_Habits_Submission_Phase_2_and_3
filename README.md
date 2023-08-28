@@ -31,12 +31,18 @@ During the first run und after compleating the tests, or discard it at the begin
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/92bc2d52-061e-4698-8996-5a51f037c34c)
 
 ## 3 Menu:
-This is the palce where the user through typing the predefine letter can start 
+This is the palce where the user through typing the predefine letter can choose one from avaliable functions.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
 
-#### 3 Menu.help:
+## 3 Menu.help(h):
 This is the place prepered for the user_manual.
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/379798ca-11e4-42f9-80ce-8b1bdf3a5291)
+
+## 3 Menu.Check_off_habit(c):
+
+
 
 
 
