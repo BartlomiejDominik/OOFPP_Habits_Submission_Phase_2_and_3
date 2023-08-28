@@ -90,6 +90,18 @@ Hier user can delete(deactivate) existing habits by choosing them from the list.
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7ffd61f0-0d79-40ae-90b5-ac5eeeb8ea0b)
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/32f9c44c-f2f9-4fc3-bb30-29815d919a90)
 
+## 3.6 Menu.Exit(x):
+This part of the code is responsible for closing the app and saving the current date in 'log_out_time.json' file which will be used be the next lauch of the program f.e. to prompt user not completed habits since last log_in.
+
+    def log_out(log_out_file):
+        model = Utilities()
+        log_out_time = datetime.now().date().isoformat()  # .isoformat() converts date into a string (ISO
+        # 8601:"YYYY-MM-DD")
+        model.save_into_json_file(log_out_time, log_out_file,
+                                  indent_level=4)  # indent specifies number of spaces for each
+        # Level of indentation in *.json file. This makes the structure of the file more readable if open separately.
+        sys.exit()  # exit the code
+
 
 
 
