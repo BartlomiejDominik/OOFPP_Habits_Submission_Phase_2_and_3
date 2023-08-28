@@ -81,6 +81,9 @@ User can choose betwenn two predefind options:
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/8b15a0e5-339d-4608-a211-a71c399f5517)
 
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/68de086f-fe01-4290-bfd5-aba0054bcee8)
+
+
 
 
 
