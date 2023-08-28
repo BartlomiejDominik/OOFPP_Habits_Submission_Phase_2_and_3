@@ -25,9 +25,9 @@ In some points of this process there is a interaction(pressing enter, to go forw
 
 With the 'assert' command the parts of the code are checked. 
 
-'# creat, based on five default habits, the dataset with random check_offs for last 28 days(four weeks).
-            print('\n########## Test 2. Creating the dataset with random check_offs for last 28 days(four weeks) '
-                  '##########\n')
+#As example the part of the code which test if: creating, based on five default habits, the dataset with random check_offs for last 28 days(four weeks), was succesfull. 
+
+            print('\n########## Test 2. Creating the dataset with random check_offs for last 28 days(four weeks) ##########\n')
             time.sleep(3)
             dataset = Set()
             dataset.test_function(model.read_from_json_file(database), database)
