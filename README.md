@@ -23,6 +23,18 @@ In some points of this process there is a interaction(pressing enter, to go forw
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981)
 
+## 2.2 Launch.menu:
+During the first run und after compleating the tests, or discard it at the begining, the application will cheeck if database and log_out file are existing. If not these will be created wit five predefined habits
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/227a0ce5-a3a9-43ab-ae2f-95f568f480e0)
+
+
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
+
+## 3 Menu:
+This is the palce where the user through typing the predefine letter can start 
+
+
 
 
 
