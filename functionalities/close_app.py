@@ -1,0 +1,23 @@
+from utilities.utilities import Utilities
+
+
+class CloseApp:
+
+    @staticmethod
+    def close_app(log_out_file):
+        model = Utilities()
+        while True:
+            try:
+                model.clear_console()
+                if input('\nTo close the Application please type (y) or press enter to go back to the menu: \n') == 'y':
+                    model.log_out(log_out_file)
+                else:
+                    model.clear_console()
+                    break
+                    # menu.main_menu(log_out_file, database)
+                    # main_menu()
+                # else:
+                #     print('Invalid input. Please type "a" or "b".')
+
+            except Exception as e:
+                print('An error occurred:', e)
