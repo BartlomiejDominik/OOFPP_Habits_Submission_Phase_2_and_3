@@ -48,7 +48,7 @@ During the first run and after completing the tests, or discarding them at the b
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/92bc2d52-061e-4698-8996-5a51f037c34c)
 
 ## 4 Menu:
-This is the palce where the user through typing the predefine letter can choose one from avaliable functions. Based of the both files 'databse.json' and 'log_out_time.json' (set as default two days earlier fot the presentation purpose) user get prompt in the upper part of menu those habits there are not completed since last log_out. If last log_out was earlier the same day that will not count and this part of menu will be empty. 
+This is the place where the user can choose from available functions by typing the predefined letter. Based on both files 'database.json' and 'log_out_time.json' (set by default two days earlier for presentation purposes), the user is prompted in the upper part of the menu with habits that have not been completed since the last log-out. If the last log_out was earlier on the same day, it will not be considered, and this part of the menu will be empty.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
 
@@ -58,7 +58,9 @@ This is the place prepered for the user_manual.
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/379798ca-11e4-42f9-80ce-8b1bdf3a5291)
 
 ## 4.2 Menu.Check_off_habit(c):
-In this part user have the possibility to check of anyfrom the activ habits that hasn't been not yet completed for this day or this week. Logic hier is based on two variables: 'Active'(boolean) and 'Periodicity'('daily' or 'weekly'), f.e. if an activ habit with weekly periodicity have allredy check_off mark in the database at monday it will not appera in the list of habits to completed since next week.  
+In this part, the user has the possibility to check off any active habits that have not yet been completed for the day or week. The logic here is based on two variables: 'Active' (boolean) and 'Periodicity' ('daily' or 'weekly'). For instance, if an active habit with weekly periodicity already has a check-off mark in the database for Monday, it will not appear in the list of habits to be completed until the following week.
+
+
 
  operation.list_of_weekly_habits_with_check_offs_this_week(database, not_completed_habits_week)
                 # search in a 'habits' database and print all the habits that have to be done weekly
