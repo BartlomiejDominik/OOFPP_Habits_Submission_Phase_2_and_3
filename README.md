@@ -4,23 +4,25 @@
 
 ## 1. Distribution:
 The application will be delivered as a compressed zip file containing the executable file and all subfolders.
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7397c525-bbe9-48ba-88ee-c190b9befad9)
+
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7397c525-bbe9-48ba-88ee-c190b9befad9" alt="Image" width="600" height="400">
 
 ## 2. Data storage:
 All the data is stored in JSON files. The database is a list of dictionaries, with each habit represented as one dictionary with attributes.
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9)
 
-  
-
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9" alt="Image" width="600" height="600">
 
 ## 3. Launch:
 Because of the early stage of developing of this application user after launching the exe. file will be asked if it should run test fixture or go direct go to main menu:
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/bde2b7f3-c462-435a-8a64-b176b2ec926c)
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/bde2b7f3-c462-435a-8a64-b176b2ec926c" alt="Image" width="400" height="100">
 
 ## 3.1 Launch.test:
 User shoul type 't' and press enter to launch test run. After this there will propmt a messages with the information according to stage of this proces and user will be shown the sample data.
 In some points of this process there is a interaction(pressing enter, to go forward) from the user site needed. This functionality sholud allow to track the progges during the testing process.
+
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9" alt="Image" width="600" height="400">
+
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9)
 
