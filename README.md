@@ -29,7 +29,7 @@ The user should type 't' and press Enter to initiate the test run. Subsequently,
 ### The 'assert' command is used to check parts of the code.
 
 For example, a part of the code tests if the creation of a dataset, based on five default habits, with random check-offs for the last 28 days (four weeks) was successful.
-
+<pre>
             print('\n########## Test 2. Creating the dataset with random check_offs for last 28 days(four weeks) ##########\n')
             time.sleep(3)
             dataset = Set()
@@ -39,6 +39,7 @@ For example, a part of the code tests if the creation of a dataset, based on fiv
             for habit in result_habits:
                 assert len(habit['Check_offs']) is not None
             print('\n########## Test 2. Successfully completed! ##########\n')
+</pre>
 
 ## 3.2 Launch.menu:
 During the first run and after completing the tests, or discarding them at the beginning, the application will check if the database and log_out file exist. If not, these will be created with five predefined habits. The last log_out_date is set to be two days earlier to demonstrate how user notifications about incomplete habits work. These two steps occur only if any of the files are missing
@@ -60,19 +61,20 @@ This is the place prepered for the user_manual.
 ## 4.2 Menu.Check_off_habit(c):
 In this part, the user has the possibility to check off any active habits that have not yet been completed for the day or week. The logic here is based on two variables: 'Active' (boolean) and 'Periodicity' ('daily' or 'weekly'). For instance, if an active habit with weekly periodicity already has a check-off mark in the database for Monday, it will not appear in the list of habits to be completed until the following week.
 
+<pre>
+operation.list_of_weekly_habits_with_check_offs_this_week(database, not_completed_habits_week)
+# search in a 'habits' database and print all the habits that have to be done weekly
+print('------------------------------\nHabits on a weekly basis:\n')
+for habit in not_completed_habits_week:
+    # habits
+    if habit['Periodicity'] == "weekly" and habit['Active'] == True:
+        max_counter += 1
+        daily_and_weekly_habits.append(habit)
+        print(max_counter, habit['Task'], "-", habit['Specification']) # print each item from the list in a separate line
+    else:
+        pass
+</pre>
 
-
- operation.list_of_weekly_habits_with_check_offs_this_week(database, not_completed_habits_week)
-                # search in a 'habits' database and print all the habits that have to be done weekly
-                print('------------------------------\nHabits on a weekly basis:\n')
-                for habit in not_completed_habits_week:  # habits
-                    if habit['Periodicity'] == "weekly" and habit['Active'] == True:
-                        max_counter += 1
-                        daily_and_weekly_habits.append(habit)
-                        print(max_counter, habit['Task'], "-", habit['Specification'])  # print each item from the list
-                    # in a separate line
-                    else:
-                        pass
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/95d00d33-fd34-4205-aeef-2f7e2539b239)
 
 ## 4.3 Menu.Add_new_habit(n):
@@ -98,6 +100,7 @@ Hier user can delete(deactivate) existing habits by choosing them from the list.
 ## 4.6 Menu.Exit(x):
 This part of the code is responsible for closing the app and saving the current date in 'log_out_time.json' file which will be used be the next lauch of the program f.e. to prompt user not completed habits since last log_in.
 
+<pre>
     def log_out(log_out_file):
         model = Utilities()
         log_out_time = datetime.now().date().isoformat()  # .isoformat() converts date into a string (ISO
@@ -106,6 +109,7 @@ This part of the code is responsible for closing the app and saving the current 
                                   indent_level=4)  # indent specifies number of spaces for each
         # Level of indentation in *.json file. This makes the structure of the file more readable if open separately.
         sys.exit()  # exit the code
+</pre>
 
 
 
