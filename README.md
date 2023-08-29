@@ -97,25 +97,43 @@ for habit in not_completed_habits_week:
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/95d00d33-fd34-4205-aeef-2f7e2539b239)
 
+Figure 11. Check off habit interface
+
 ## 4.3 Menu.Add_new_habit(n):
 This is the place to add new habits to the existing default habits in the database.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f875d8e4-0d04-4735-b829-9379139e86b9)
 
+Figure 12. Adding new habit interface
+
 ## 4.4 Menu.Analytics(a):
 User can choose betwenn two predefind options:
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/fc1f976a-8cb0-446d-a4e4-9df20a15ef38)
 
+Figure 13. Analytics menu layout
+
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/8b15a0e5-339d-4608-a211-a71c399f5517)
 
+Figure 14. Analytics/All active habits
+
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/68de086f-fe01-4290-bfd5-aba0054bcee8)
+
+Figure 15. Analytics/Longest run streaks for each habit
 
 ## 4.5 Menu.Settings(s):
 Here, users can deactivate existing habits by selecting them from the list. Upon deactivation, the 'Active' parameter in the database will be changed from 'True' to 'False'. The second option in this menu is designed to modify the last log_out time. This option is intended solely for testing purposes, such as setting a date in the past to display incomplete habits in the main menu.  
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f89c36ff-1ae4-4a45-ab2e-53a063c40050)
+
+Figure 16. Settings menu layout
+
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7ffd61f0-0d79-40ae-90b5-ac5eeeb8ea0b)
+
+Figure 17. Interface to deactivate a habit
+
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/32f9c44c-f2f9-4fc3-bb30-29815d919a90)
+
+Figure 18. Example of the deactivated habit in database file 
 
 ## 4.6 Menu.Exit(x):
 This part of the code is responsible for closing the app and saving the current date in the 'log_out_time.json' file. This saved date will be used by the next launch of the program, for example, to remind the user of incomplete habits since the last log_in.
