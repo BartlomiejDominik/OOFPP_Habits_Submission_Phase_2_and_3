@@ -23,12 +23,14 @@ In some points of this process there is a interaction(pressing enter, to go forw
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9" alt="Image" width="600" height="400">
 
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c" alt="Image" width="600" height="400">
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9)
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981" alt="Image" width="600" height="100">
+
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c)
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981
+![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981)
 
 With the 'assert' command the parts of the code are checked. 
 
