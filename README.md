@@ -10,7 +10,8 @@ The application will be delivered as a compressed zip file containing the execut
 ## 2. Data storage:
 All the data is stored in JSON files. The database is a list of dictionaries, with each habit represented as one dictionary with attributes.
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9" alt="Image" width="600" height="600">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9" alt="Figure 2. data structure in the database.json file" width="600" height="600">
+Figure 2. data structure in the database.json file
 
 ## 3. Launch:
 Due to the early stage of development of this application, users will be asked, after launching the executable file, whether they should run the test fixture or proceed directly to the main menu.
