@@ -17,10 +17,11 @@ Due to the early stage of development of this application, users will be asked, 
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/bde2b7f3-c462-435a-8a64-b176b2ec926c" alt="Image" width="400" height="100">
 
-## 3.1 Launch.test:
+## 3.1 Launch.Test:
 The user should type 't' and press Enter to initiate the test run. Subsequently, messages will be prompted, providing information about the current stage of this process, and the user will be presented with sample data. At certain points in this process, user interaction (pressing Enter to proceed) is required. This functionality is designed to enable progress tracking throughout the testing process.
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9" alt="Image" width="600" height="400">
+
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c" alt="Image" width="400" height="100">
 
@@ -41,7 +42,7 @@ For example, a part of the code tests if the creation of a dataset, based on fiv
             print('\n########## Test 2. Successfully completed! ##########\n')
 </pre>
 
-## 3.2 Launch.menu:
+## 3.2 Launch.Menu:
 During the first run and after completing the tests, or discarding them at the beginning, the application will check if the database and log_out file exist. If not, these will be created with five predefined habits. The last log_out_date is set to be two days earlier to demonstrate how user notifications about incomplete habits work. These two steps occur only if any of the files are missing
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/227a0ce5-a3a9-43ab-ae2f-95f568f480e0)
@@ -53,7 +54,7 @@ This is the place where the user can choose from available functions by typing t
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
 
-## 4.1 Menu.help(h):
+## 4.1 Menu.Help(h):
 This is the place prepered for the user_manual.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/379798ca-11e4-42f9-80ce-8b1bdf3a5291)
@@ -78,7 +79,7 @@ for habit in not_completed_habits_week:
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/95d00d33-fd34-4205-aeef-2f7e2539b239)
 
 ## 4.3 Menu.Add_new_habit(n):
-This is the place to add new habits to already existing default habits in database
+This is the place to add new habits to the existing default habits in the database.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f875d8e4-0d04-4735-b829-9379139e86b9)
 
@@ -91,14 +92,14 @@ User can choose betwenn two predefind options:
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/68de086f-fe01-4290-bfd5-aba0054bcee8)
 
 ## 4.5 Menu.Settings(s):
-Hier user can delete(deactivate) existing habits by choosing them from the list. After deactivation the parameter 'Active' in database will be changed from True to false. The second optionin this menu is created to change last log_out_time. This option is only for testing purpose, f.e. to set date in the past and shown not completed habits in main menu.  
+Here, users can deactivate existing habits by selecting them from the list. Upon deactivation, the 'Active' parameter in the database will be changed from 'True' to 'False'. The second option in this menu is designed to modify the last log_out time. This option is intended solely for testing purposes, such as setting a date in the past to display incomplete habits in the main menu.  
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f89c36ff-1ae4-4a45-ab2e-53a063c40050)
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7ffd61f0-0d79-40ae-90b5-ac5eeeb8ea0b)
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/32f9c44c-f2f9-4fc3-bb30-29815d919a90)
 
 ## 4.6 Menu.Exit(x):
-This part of the code is responsible for closing the app and saving the current date in 'log_out_time.json' file which will be used be the next lauch of the program f.e. to prompt user not completed habits since last log_in.
+This part of the code is responsible for closing the app and saving the current date in the 'log_out_time.json' file. This saved date will be used by the next launch of the program, for example, to remind the user of incomplete habits since the last log_in.
 
 <pre>
     def log_out(log_out_file):
