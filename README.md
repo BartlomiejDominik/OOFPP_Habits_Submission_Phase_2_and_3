@@ -1,4 +1,4 @@
-# This is a beta version of the HabiBart application created to help users define and track their habits.
+# This repository contains a beta version of the HabiBart application created to help users define and track their habits.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/9557a60a-f39c-4a04-b03a-b659216b9b04)
 
@@ -13,23 +13,22 @@ All the data is stored in JSON files. The database is a list of dictionaries, wi
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9" alt="Image" width="600" height="600">
 
 ## 3. Launch:
-Because of the early stage of developing of this application user after launching the exe. file will be asked if it should run test fixture or go direct go to main menu:
+Due to the early stage of development of this application, users will be asked, after launching the executable file, whether they should run the test fixture or proceed directly to the main menu.
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/bde2b7f3-c462-435a-8a64-b176b2ec926c" alt="Image" width="400" height="100">
 
 ## 3.1 Launch.test:
-User shoul type 't' and press enter to launch test run. After this there will propmt a messages with the information according to stage of this proces and user will be shown the sample data.
-In some points of this process there is a interaction(pressing enter, to go forward) from the user site needed. This functionality sholud allow to track the progges during the testing process.
+The user should type 't' and press Enter to initiate the test run. Subsequently, messages will be prompted, providing information about the current stage of this process, and the user will be presented with sample data. At certain points in this process, user interaction (pressing Enter to proceed) is required. This functionality is designed to enable progress tracking throughout the testing process.
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9" alt="Image" width="600" height="400">
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c" alt="Image" width="600" height="100">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c" alt="Image" width="400" height="100">
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981" alt="Image" width="600" height="400">
 
-### With the 'assert' command the parts of the code are checked. 
+### The 'assert' command is used to check parts of the code.
 
-As example the part of the code which test if: creating, based on five default habits, the dataset with random check_offs for last 28 days(four weeks), was succesfull. 
+For example, a part of the code tests if the creation of a dataset, based on five default habits, with random check-offs for the last 28 days (four weeks) was successful.
 
             print('\n########## Test 2. Creating the dataset with random check_offs for last 28 days(four weeks) ##########\n')
             time.sleep(3)
@@ -42,7 +41,7 @@ As example the part of the code which test if: creating, based on five default h
             print('\n########## Test 2. Successfully completed! ##########\n')
 
 ## 3.2 Launch.menu:
-During the first run und after compleating the tests, or discard it at the begining, the application will cheeck if database and log_out file are existing. If not these will be created wit five predefined habits. Last log_out_date ist set to be to days earlier to present how user notifiactions about not completed habits are working. Those two steps are happening only if any of the file is missing.
+During the first run and after completing the tests, or discarding them at the beginning, the application will check if the database and log_out file exist. If not, these will be created with five predefined habits. The last log_out_date is set to be two days earlier to demonstrate how user notifications about incomplete habits work. These two steps occur only if any of the files are missing
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/227a0ce5-a3a9-43ab-ae2f-95f568f480e0)
 
