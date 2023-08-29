@@ -7,26 +7,36 @@ The application will be delivered as a compressed zip file containing the execut
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7397c525-bbe9-48ba-88ee-c190b9befad9" alt="Image" width="600" height="400">
 
+Figure 1. Structure of the files in main folder
+
 ## 2. Data storage:
 All the data is stored in JSON files. The database is a list of dictionaries, with each habit represented as one dictionary with attributes.
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9" alt="Figure 2. data structure in the database.json file" width="600" height="600">
-Figure 2. data structure in the database.json file
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9" alt="Image" width="600" height="600"></b>
+
+Figure 2. Data structure in the database.json file
 
 ## 3. Launch:
 Due to the early stage of development of this application, users will be asked, after launching the executable file, whether they should run the test fixture or proceed directly to the main menu.
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/bde2b7f3-c462-435a-8a64-b176b2ec926c" alt="Image" width="400" height="100">
 
+Figure 3. Starting sequence of the application
+
 ## 3.1 Launch.Test:
 The user should type 't' and press Enter to initiate the test run. Subsequently, messages will be prompted, providing information about the current stage of this process, and the user will be presented with sample data. At certain points in this process, user interaction (pressing Enter to proceed) is required. This functionality is designed to enable progress tracking throughout the testing process.
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9" alt="Image" width="600" height="400">
 
+Figure 4. Introduction to the first test
 
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c" alt="Image" width="400" height="100">
 
+Figure 5. Example window screen from test fixture lauch
+
 <img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981" alt="Image" width="600" height="400">
+
+Figure 6. The last test results screen
 
 ### The 'assert' command is used to check parts of the code.
 
@@ -48,17 +58,25 @@ During the first run and after completing the tests, or discarding them at the b
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/227a0ce5-a3a9-43ab-ae2f-95f568f480e0)
 
+Figure 7. Launch testing proceder screen: database.json file not found
+
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/92bc2d52-061e-4698-8996-5a51f037c34c)
+
+Figure 8. Launch testing proceder screen: log_out_time.json file not found
 
 ## 4 Menu:
 This is the place where the user can choose from available functions by typing the predefined letter. Based on both files 'database.json' and 'log_out_time.json' (set by default two days earlier for presentation purposes), the user is prompted in the upper part of the menu with habits that have not been completed since the last log-out. If the last log_out was earlier on the same day, it will not be considered, and this part of the menu will be empty.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
 
+Figure 9. Main menu layout
+
 ## 4.1 Menu.Help(h):
 This is the place prepered for the user_manual.
 
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/379798ca-11e4-42f9-80ce-8b1bdf3a5291)
+
+Figure 10. Main menu layout
 
 ## 4.2 Menu.Check_off_habit(c):
 In this part, the user has the possibility to check off any active habits that have not yet been completed for the day or week. The logic here is based on two variables: 'Active' (boolean) and 'Periodicity' ('daily' or 'weekly'). For instance, if an active habit with weekly periodicity already has a check-off mark in the database for Monday, it will not appear in the list of habits to be completed until the following week.
