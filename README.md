@@ -7,7 +7,7 @@ The application will be delivered as a compressed zip file containing the execut
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7397c525-bbe9-48ba-88ee-c190b9befad9)
 
 ## 2. Data storage:
-All the data are storred in to json files. The database is a list of dictionaries where each habit is one dictionary with atributes.
+All the data is stored in JSON files. The database is a list of dictionaries, with each habit represented as one dictionary with attributes.
 ![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9)
 
   
