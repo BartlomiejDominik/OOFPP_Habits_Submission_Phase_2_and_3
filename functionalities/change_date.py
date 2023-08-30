@@ -5,9 +5,15 @@ from utilities.utilities import Utilities
 
 
 class ChangeDate:
+    """This class is used to change the date of the last logout."""
 
     @staticmethod
     def change_date(log_out_file):
+        """Allows the user to manually set the date of the last log_out for testing purposes.
+
+        Args:
+            log_out_file (str): The name of the JSON file to save the new date to.
+        """
         model = Utilities()
 
         while True:

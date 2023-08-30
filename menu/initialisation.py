@@ -4,9 +4,19 @@ from datetime import datetime, timedelta
 
 
 class StartInitialisation:
+    """A class responsible for initializing the application's data and settings upon start."""
 
     @staticmethod
     def start_initialisation(database, log_out_file):
+        """Perform the initial setup of the application by loading or creating necessary files and data.
+
+        Args:
+            database (str): The filename of the JSON database containing habits' data.
+            log_out_file (str): The filename of the JSON file storing the last logout date.
+
+        Returns:
+            None
+        """
 
         model = Utilities()
         operation = Operations()

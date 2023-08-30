@@ -4,8 +4,16 @@ from habit.habit import Habit
 
 
 class AddNewHabit:
+    """This class is used to add new habits."""
     def new_habit_add(self, database, main_menu):
+        """Navigate the user through the process of adding a new habit.
+
+        Args:
+            database (str): The name of the JSON database file.
+            main_menu (function): The function to navigate back to the main menu.
+        """
         model = Utilities()
+        new_habit_task = str
         try:
 
             new_habit_task = ""
@@ -44,6 +52,18 @@ class AddNewHabit:
 
     @staticmethod
     def add_new_habit(new_habit_task, new_habit_specification, new_habit_periodicity, database, habits):
+        """Add and save the new habit to the database.
+
+        Args:
+            new_habit_task (str): The short task description of the new habit.
+            new_habit_specification (str): The specification of the new habit.
+            new_habit_periodicity (str): The periodicity of the new habit; "weekly" or "daily".
+            database (str): The name of the JSON database file.
+            habits (list): List of existing habits in the database.
+
+        Returns:
+            Habit: The newly added Habit object.
+        """
         model = Utilities()
         habit = Habit(new_habit_task, new_habit_specification, new_habit_periodicity, habits)
         habits.append(habit.set_new_habit())

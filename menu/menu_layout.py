@@ -2,8 +2,22 @@ from habit.modifications import Operations
 
 
 class Menu:
+    """A class responsible for displaying the main menu layout and options to the user.
+
+    Attributes:
+        N/A
+    """
     @staticmethod
     def menu_layout(log_out_file, database):
+        """Display the main menu layout with options and habit status.
+
+        Args:
+            log_out_file (str): The filename of the JSON file storing the last logout date.
+            database (str): The filename of the JSON database containing habits' data.
+
+        Returns:
+            None
+        """
         operation = Operations()
 
         line = 76

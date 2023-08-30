@@ -3,13 +3,27 @@ from datetime import datetime, timedelta
 
 
 class RunStreak:
-
+    """This class is used to calculate and display the longest run streak for habits."""
     def the_longest_run_streak_for_habits(self, habits):
+        """Calculate and display the longest run streak for habits.
+
+        Args:
+            habits (list): List of habit dictionaries.
+        """
         model = Utilities()
         # menu = menu()
         print('\nThe longest run streak for a single habit is:\n-----------------------------------------------------')
 
         def run_streak_all(x):
+            """Check if a habit's periodicity is either daily or weekly and it is active.
+
+            Args:
+                x (dict): A dictionary representing a habit.
+
+            Returns:
+                bool: True if the habit's periodicity is 'daily' or 'weekly'
+                and it's active, False otherwise.
+            """
             return (x['Periodicity'] == 'daily' or x['Periodicity'] == 'weekly') and x['Active']
 
         filtered_habits = tuple(filter(run_streak_all, habits))
@@ -48,6 +62,15 @@ class RunStreak:
 
     @staticmethod
     def calculate_longest_streak(check_offs, periodicity):
+        """Calculate the longest streak of check-offs for a given periodicity.
+
+        Args:
+            check_offs (list): List of check-off dates.
+            periodicity (str): The periodicity of the habit ('daily' or 'weekly').
+
+        Returns:
+            tuple: (longest_streak, start_date, end_date)
+        """
         sorted_dates = sorted([datetime.strptime(date_str, '%Y-%m-%dT%H:%M:%S.%f') for date_str in check_offs])
 
         if periodicity == 'daily':

@@ -7,6 +7,15 @@ class Operations:
 
     @staticmethod
     def predefined_habits(habits, database):
+        """Add predefined habits to the habits' list and save them to the database.
+
+        Args:
+           habits (list): List of existing habits.
+           database (str): Path to the JSON database file.
+
+        Returns:
+           list: Updated list of habits.
+        """
         model = Utilities()
 
         habit = Habit("Jogging", "At least 30 min. or 3 KM.", "daily", habits)
@@ -30,6 +39,17 @@ class Operations:
 
     # executed with: 'daily' or 'weekly' parameter
     def list_of_habits_not_being_checked_off_since_last_login(self, periodicity, log_out_file, database, line):
+        """Retrieve a list of habits that have not been checked off since the last login.
+
+        Args:
+            periodicity (str): Periodicity of the habits ("daily" or "weekly").
+            log_out_file (str): Path to the last login date JSON file.
+            database (str): Path to the JSON database file.
+            line (int): Length of the line used for formatting.
+
+        Returns:
+            list: List of habits not checked off since the last login.
+        """
         model = Utilities()
         last_login = model.read_from_json_file(log_out_file)  # read from a file when the user closes the app for
         # last time
@@ -43,9 +63,8 @@ class Operations:
 
         for habit in habits_not_checked_off:  # prepared the data in Check_off's list to be used in python
             check_offs = [datetime.fromisoformat(check_off.split("T")[0]).date() for check_off in habit["Check_offs"]]
-            if habit["Periodicity"] == periodicity and habit['Active'] == True:  # sort out 'habit' dictionaries with
-                # 'daily' or 'weekly'
-                # periodicity
+            if habit["Periodicity"] == periodicity and habit['Active']:  # True
+                # sort out 'habit' dictionaries with 'daily' or 'weekly' periodicity
                 for date1 in self.daterange(last_login_date + timedelta(days=1), today):  # check
                     if date1 not in check_offs:
                         # Create a copy of the habit dictionary to avoid modifying the original habit
@@ -80,6 +99,15 @@ class Operations:
 
     @staticmethod
     def daterange(start_date, end_date):  # to generate a sequence of dates within a specified range
+        """Generate a sequence of dates within a specified range.
+
+        Args:
+            start_date (date): Start date of the range.
+            end_date (date): End date of the range.
+
+        Yields:
+            date: Dates within the specified range.
+        """
         for n in range(int((end_date - start_date).days)):
             yield start_date + timedelta(n)
 
@@ -87,6 +115,15 @@ class Operations:
 
     @staticmethod
     def list_of_habits_to_check_off_today(database, not_completed_habits_day):
+        """Prepare the list of habits that need to be checked off today.
+
+        Args:
+            database (str): Path to the JSON database file.
+            not_completed_habits_day (list): List to store habits not checked off today.
+
+        Returns:
+            list: Updated list of habits not checked off today.
+        """
         model = Utilities()
         last_login = datetime.now().date().isoformat()
         # print(last_login)
@@ -108,12 +145,27 @@ class Operations:
     # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     @staticmethod
     def get_start_and_end_of_week():
+        """
+        Get the start and end dates of the current week.
+
+        Returns:
+            tuple: Start and end dates of the current week.
+        """
         today = datetime.now().date()
         start_of_week = today - timedelta(days=today.weekday())  # Monday of the current week
         end_of_week = start_of_week + timedelta(days=6)  # Sunday of the current week
         return start_of_week, end_of_week
 
     def list_of_weekly_habits_with_check_offs_this_week(self, database, not_completed_habits_week):
+        """Retrieve a list of habits with check-offs scheduled for the current week.
+
+        Args:
+            database (str): Path to the JSON database file.
+            not_completed_habits_week (list): List to store habits with check-offs this week.
+
+        Returns:
+            list: Updated list of habits with check-offs this week.
+        """
         model = Utilities()
         start_of_week, end_of_week = self.get_start_and_end_of_week()
 

@@ -1,15 +1,30 @@
-from utilities.utilities import Utilities
+# from utilities.utilities import Utilities
 import random
 from datetime import datetime, timedelta
 from habit.modifications import Operations
 from utilities.utilities import Utilities
-from collections import defaultdict
+# from collections import defaultdict
 
 
 class Set:
+    """A class containing methods to generate and manipulate test data for habits.
+
+    Attributes:
+        N/A
+    """
 
     @staticmethod
     def test_function(habits, database):
+        """
+        Generate a random dataset for testing habits over the past 28 days.
+
+        Args:
+            habits (list): A list of habit dictionaries.
+            database (str): The filename of the JSON database containing habits' data.
+
+        Returns:
+            None
+        """
         model = Utilities()
         dataset = Set()
         operation = Operations()
@@ -20,7 +35,8 @@ class Set:
             try:
                 model.clear_console()
                 user_choice = input(
-                    '\nTo generate the random dataset for past 28 days?\nPlease enter (y) for yes and (n) to go back.\n')
+                    '\nTo generate the random dataset for past 28 days?\n'
+                    'Please enter (y) for yes and (n) to go back.\n')
                 if user_choice == 'y':
                     model.clear_console()
                     # habits.clear()
@@ -38,6 +54,15 @@ class Set:
 
     @staticmethod
     def random_day(habits, database):
+        """Generate random check-off dates for habits over the past 28 days.
+
+        Args:
+            habits (list): A list of habit dictionaries.
+            database (str): The filename of the JSON database containing habits' data.
+
+        Returns:
+            list: Updated list of habit dictionaries with random check-off dates.
+        """
         model = Utilities()
         model.clear_console()
         dataset = Set()
@@ -81,6 +106,15 @@ class Set:
 
     @staticmethod
     def remove_duplicates(habits, database):
+        """Remove duplicate check-off dates from the habit dictionaries.
+
+        Args:
+           habits (list): A list of habit dictionaries.
+           database (str): The filename of the JSON database containing habits' data.
+
+        Returns:
+           list: Updated list of habit dictionaries with removed duplicate check-off dates.
+        """
         from utilities.utilities import Utilities
         from datetime import datetime
         utilities = Utilities()

@@ -2,8 +2,17 @@ from utilities.utilities import Utilities
 
 
 class Manual:
+    """A class to provide the user manual and instructions for using the HabiBart App."""
     @staticmethod
     def user_manual(main_menu):
+        """Display the user manual and instructions for using the HabiBart App.
+
+        Args:
+            main_menu (function): The main menu function to return after reading the manual.
+
+        Returns:
+            None
+        """
         model = Utilities()
         while True:
             try:

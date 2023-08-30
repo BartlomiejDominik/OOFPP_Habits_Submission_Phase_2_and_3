@@ -5,9 +5,17 @@ from habit.modifications import Operations
 
 
 class CheckOff:
+    """This class is used to check off the active habits."""
 
     @staticmethod
     def daily_and_weekly_habits_function(database, not_completed_habits_day, not_completed_habits_week):
+        """Prepare the list of habits divided by their periodicity (daily or weekly) for checking off.
+
+        Args:
+            database (str): The name of the JSON database file.
+            not_completed_habits_day (list): List of daily habits to be checked off.
+            not_completed_habits_week (list): List of weekly habits to be checked off.
+        """
         model = Utilities()
         habits = model.read_from_json_file(database)
         operation = Operations()
@@ -25,7 +33,7 @@ class CheckOff:
                 # print(not_completed_habits_day)
                 # search in a 'habits' database and print all the habits that have to be done daily
                 for habit in not_completed_habits_day:  # habits
-                    if habit['Periodicity'] == "daily" and habit['Active'] == True:
+                    if habit['Periodicity'] == "daily" and habit['Active']:  # == True
                         counter += 1
                         daily_and_weekly_habits.append(habit)
                         print(counter, habit['Task'], "-", habit['Specification'])  # print each item from the list
@@ -38,7 +46,7 @@ class CheckOff:
                 # search in a 'habits' database and print all the habits that have to be done weekly
                 print('------------------------------\nHabits on a weekly basis:\n')
                 for habit in not_completed_habits_week:  # habits
-                    if habit['Periodicity'] == "weekly" and habit['Active'] == True:
+                    if habit['Periodicity'] == "weekly" and habit['Active']:  # True
                         max_counter += 1
                         daily_and_weekly_habits.append(habit)
                         print(max_counter, habit['Task'], "-", habit['Specification'])  # print each item from the list
@@ -132,6 +140,16 @@ class CheckOff:
 
     @staticmethod
     def check_off_habit(habit, habits, database):
+        """Check off a habit and update the database.
+
+        Args:
+            habit (dict): The habit to be checked off.
+            habits (list): List of habit dictionaries.
+            database (str): The name of the JSON database file.
+
+        Returns:
+            list: The updated list of habit dictionaries.
+        """
         model = Utilities()
         check_off = datetime.now()
         found_habit = habit

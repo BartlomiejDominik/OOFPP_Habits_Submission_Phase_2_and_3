@@ -3,11 +3,24 @@ from datetime import datetime, timedelta
 
 
 class Analytics:
+    """This class coordinates the analytics part of the code."""
     def __init__(self, habits, main_menu):
+        """Initialize an Analytics instance.
+
+        Args:
+            habits (list): List of habit dictionaries.
+            main_menu (function): Function to navigate back to the main menu.
+        """
         self.habits = habits
         self.main_menu = main_menu
 
-    def analytics(self, habits, main_menu, database):
+    def analytics(self, main_menu, database):
+        """Navigate through the analytics submenu.
+
+        Args:
+            main_menu (function): Function to navigate back to the main menu.
+            database (str): The name of the JSON database file.
+        """
         model = Utilities()
         model.clear_console()
         while True:
@@ -31,9 +44,10 @@ class Analytics:
                     # tuple:
 
                     def habits_daily(x):
+                        """This function sorted out the activ habits with daily periodicity"""
                         return x['Periodicity'] == 'daily' and x['Active']  # == True
 
-                    filtered_habits = filtered_habits = tuple(filter(habits_daily, habits_tuple))
+                    filtered_habits = tuple(filter(habits_daily, habits_tuple))
                     print('\nPeriodicity: daily\n')
                     for count, habit in enumerate(filtered_habits, start=1):
                         print(f"{count}. {habit['Task']}: {habit['Specification']} - created at: {habit['Start_Date']}")
@@ -41,9 +55,10 @@ class Analytics:
                     # pprint(filtered_habits, width=60, depth=30, compact=True)
 
                     def habits_weekly(x):
+                        """This function sorted out the activ habits with weekly periodicity"""
                         return x['Periodicity'] == 'weekly' and x['Active']  # == True
 
-                    filtered_habits = filtered_habits = tuple(filter(habits_weekly, habits_tuple))
+                    filtered_habits = tuple(filter(habits_weekly, habits_tuple))
                     print('\nPeriodicity: weekly\n')
                     for count, habit in enumerate(filtered_habits, start=1):
                         print(f"{count}. {habit['Task']}: {habit['Specification']} - created at: {habit['Start_Date']}")
@@ -58,7 +73,7 @@ class Analytics:
                 elif user_choice == "2":
                     model.clear_console()
                     try:
-                        self.the_longest_run_streak_for_habits(habits, database)
+                        self.the_longest_run_streak_for_habits(database)
                     except Exception as e:
                         print("An error occurred:", e)
 
@@ -73,13 +88,19 @@ class Analytics:
             except Exception as e:
                 print('An error occurred:', e)
 
-    def the_longest_run_streak_for_habits(self, habits, database):
+    def the_longest_run_streak_for_habits(self, database):
+        """Display the longest run streak for habits.
+
+        Args:
+            database (str): The name of the JSON database file.
+        """
         model = Utilities()
         habits = model.read_from_json_file(database)
         # menu = menu()
         print('\nThe longest run streak for a single habit is:\n-----------------------------------------------------')
 
         def run_streak_all(x):
+            """Check if a habit's periodicity is either daily or weekly and it is active."""
             return (x['Periodicity'] == 'daily' or x['Periodicity'] == 'weekly') and x['Active']
 
         filtered_habits = tuple(filter(run_streak_all, habits))
@@ -118,6 +139,15 @@ class Analytics:
 
     @staticmethod
     def calculate_longest_streak(check_offs, periodicity):
+        """Calculate the longest streak from a list of check-off dates.
+
+        Args:
+            check_offs (list): List of check-off dates as strings.
+            periodicity (str): The periodicity of the habit ('daily' or 'weekly').
+
+        Returns:
+            tuple: A tuple containing the longest streak count, start date, and end date.
+        """
         sorted_dates = sorted([datetime.strptime(date_str, '%Y-%m-%dT%H:%M:%S.%f') for date_str in check_offs])
 
         if periodicity == 'daily':

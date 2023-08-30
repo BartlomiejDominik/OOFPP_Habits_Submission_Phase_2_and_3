@@ -5,6 +5,14 @@ from functionalities.change_date import ChangeDate
 
 
 class Settings:
+    """A class to handle user settings related to habits.
+
+    Args:
+        habits (list): List of user's habits.
+        main_menu (function): The main menu function for navigation.
+        database (str): The path to the JSON database file containing user data.
+        log_out_file (str): The path to the file storing last logout information.
+    """
     def __init__(self, habits, main_menu, database, log_out_file):
         self.habits = habits
         self.main_menu = main_menu
@@ -13,6 +21,14 @@ class Settings:
 
     @staticmethod
     def settings(habits, main_menu, database, log_out_file):
+        """Display and manage user settings related to habits.
+
+        Args:
+            habits (list): List of user's habits.
+            main_menu (function): The main menu function for navigation.
+            database (str): The path to the JSON database file containing user data.
+            log_out_file (str): The path to the file storing last logout information.
+        """
         model = Utilities()
         model.clear_console()
         model = Utilities()

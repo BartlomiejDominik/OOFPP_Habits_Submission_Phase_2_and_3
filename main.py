@@ -22,6 +22,8 @@ not_completed_habits_week = []  # global variable to store ont completed habits:
 
 # this function is prepared for launching the App
 def start_function():
+    """Starts the application by initializing files and launching the main menu."""
+
     initialisation = StartInitialisation()
     initialisation.start_initialisation(database, log_out_file)
     main_menu()
@@ -29,6 +31,7 @@ def start_function():
 
 
 def main_menu():
+    """Displays the main menu layout and proceeds to choose an option."""
     menu = Menu()
     menu.menu_layout(log_out_file, database)
 
@@ -36,7 +39,9 @@ def main_menu():
     choose_one_option()
 
 
-def option2():
+def new_habit():
+    """Navigates to the function for adding a new habit."""
+
     model = Utilities()
     model.clear_console()
     add_new_habit = AddNewHabit()
@@ -47,6 +52,7 @@ def option2():
 
 # code written to simulate the menu functions in GUI
 def choose_one_option():
+    """Handles user input and navigation through menu options."""
     utilities = Utilities()
     analytics = Analytics(habits, main_menu)
     close_app = CloseApp()
@@ -58,15 +64,15 @@ def choose_one_option():
     if user_choice == "h":
         help_navigation.help_navigation(main_menu)
 
-    if user_choice == "c":
+    elif user_choice == "c":
         check_off.daily_and_weekly_habits_function(database, not_completed_habits_day, not_completed_habits_week)
         main_menu()
 
     elif user_choice == "n":
-        option2()
+        new_habit()
 
     elif user_choice == "a":
-        analytics.analytics(habits, main_menu, database)
+        analytics.analytics(main_menu, database)
 
     elif user_choice == "x":
         close_app.close_app(log_out_file)

@@ -10,8 +10,21 @@ import os
 
 
 class TestFixture:
+    """A test fixture class for automated testing of the HabiBart application's functionalities.
+
+    Attributes:
+        N/A
+    """
 
     def test_fixture(self):
+        """Run a series of automated tests on the HabiBart application's functionalities.
+
+        Args:
+            N/A
+
+        Returns:
+            None
+        """
         user_choice = input('\nTo start text_fixture type (t) or enter to continue.\n')
         if user_choice == "t":
             # delete the files for the next run
@@ -119,4 +132,3 @@ class TestFixture:
             model = Utilities()
             model.clear_console()
             return
-
