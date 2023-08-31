@@ -9,6 +9,18 @@ from functionalities.habits_check_off import CheckOff
 from utilities.utilities import Utilities
 from menu.initialisation import StartInitialisation
 from unit_test.test_fixture import TestFixture
+import os
+import sys
+
+
+def create_unit_test_folder():
+    exe_dir = os.path.dirname(sys.executable)  # Get the directory of the .exe file
+    unit_test_dir = os.path.join(exe_dir, "unit_test")
+
+    if not os.path.exists(unit_test_dir):
+        os.makedirs(unit_test_dir)
+        print("Created 'unit_test' folder.")
+
 
 test_run = TestFixture()
 test_run.test_fixture()
@@ -93,4 +105,5 @@ def choose_one_option():
 
 
 if __name__ == '__main__':
+    create_unit_test_folder()
     start_function()
