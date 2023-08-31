@@ -20,10 +20,5 @@ class CloseApp:
                 else:
                     model.clear_console()
                     break
-                    # menu.main_menu(log_out_file, database)
-                    # main_menu()
-                # else:
-                #     print('Invalid input. Please type "a" or "b".')
-
             except Exception as e:
                 print('An error occurred:', e)

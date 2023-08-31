@@ -1,9 +1,7 @@
-# from utilities.utilities import Utilities
 import random
 from datetime import datetime, timedelta
 from habit.modifications import Operations
 from utilities.utilities import Utilities
-# from collections import defaultdict
 
 
 class Set:
@@ -119,9 +117,6 @@ class Set:
         from datetime import datetime
         utilities = Utilities()
 
-        # habits = # utilities.read_from_json_file("test_database.json")
-        # print(habits)
-
         # Remove duplicates from the Check_offs list based on yy-mm-dd format
         for habit in habits:
             unique_dates = set()
@@ -135,5 +130,4 @@ class Set:
             habit['Check_offs'] = new_check_offs
         utilities.save_into_json_file(habits, database, indent_level=4)
         return habits
-
         # print(habits)

@@ -4,26 +4,22 @@ from datetime import datetime, timedelta
 
 class RunStreak:
     """This class is used to calculate and display the longest run streak for habits."""
-    def the_longest_run_streak_for_habits(self, habits):
-        """Calculate and display the longest run streak for habits.
+
+    def the_longest_run_streak_for_habits(self, database):
+        model = Utilities()
+        model.read_from_json_file(database)
+        """Display the longest run streak for habits.
 
         Args:
-            habits (list): List of habit dictionaries.
+            database (str): The name of the JSON database file.
         """
         model = Utilities()
-        # menu = menu()
-        print('\nThe longest run streak for a single habit is:\n-----------------------------------------------------')
+        habits = model.read_from_json_file(database)
+        print('\nThe longest run streak for tuple_initialization_list single habit '
+              'is:\n-----------------------------------------------------')
 
         def run_streak_all(x):
-            """Check if a habit's periodicity is either daily or weekly and it is active.
-
-            Args:
-                x (dict): A dictionary representing a habit.
-
-            Returns:
-                bool: True if the habit's periodicity is 'daily' or 'weekly'
-                and it's active, False otherwise.
-            """
+            """Check if tuple_initialization_list habit's periodicity is either daily or weekly and it is active."""
             return (x['Periodicity'] == 'daily' or x['Periodicity'] == 'weekly') and x['Active']
 
         filtered_habits = tuple(filter(run_streak_all, habits))
@@ -38,68 +34,90 @@ class RunStreak:
 
         print('\nPeriodicity: weekly\n')
 
+        from functionalities.streak_run_weeks import StreakRunWeek
+        run_week = StreakRunWeek()
+        model = Utilities()
+
+        longest_streak_run_week = run_week.process_weekly_habits(database)
+
+        filtered_habits = tuple(filter(run_streak_all, habits))
+
+        tuple_initialization_list = []  # Initialize tuple_initialization_list list to store tuples
+
         for habit in filtered_habits:
-            if habit['Periodicity'] == 'weekly':
-                longest_streak, start_date, end_date = self.calculate_longest_streak(habit['Check_offs'],
-                                                                                     habit['Periodicity'])
-                print(f"{habit['Task']}: Longest streak: {longest_streak} weeks (from {start_date} to {end_date})")
+            longest_streak1, longest_streak_start, longest_streak_end = self.calculate_longest_streak(
+                habit['Check_offs'], habit['Periodicity'])
+            habit_tuple = (habit['Task'], longest_streak1, longest_streak_start, longest_streak_end)
+            tuple_initialization_list.append(habit_tuple)
+        max_tuple = max(tuple_initialization_list, key=lambda x: x[1])
 
-        longest_streak_overall = 0
-        longest_streak_habit = None
+        max_tuple = max(tuple_initialization_list, key=lambda x: x[1])
 
-        for habit in filtered_habits:
-            longest_streak, _, _ = self.calculate_longest_streak(habit['Check_offs'], habit['Periodicity'])
-            if longest_streak > longest_streak_overall:
-                longest_streak_overall = longest_streak
-                longest_streak_habit = habit['Task']
+        # Format the date objects in the tuple
+        start_date_formatted = max_tuple[2].strftime('%Y-%m-%d')
+        end_date_formatted = max_tuple[3].strftime('%Y-%m-%d')
+        longest_streak_run_day = [(max_tuple[0], max_tuple[1], start_date_formatted, end_date_formatted)]
+        # print(longest_streak_run_day)
+        # print(longest_streak_run_week)
 
-        print(
-            f"\nThe longest streak from all habits: {longest_streak_overall} days in habit: {longest_streak_habit}\n"
-            f"--------------------------------------------------------------\n")
+        # Compare both longest_streak_run_ for days and weeks to find max. value
+        max_value_list1 = max(longest_streak_run_day, key=lambda x: x[1])[1]
+        max_value_list2 = max(longest_streak_run_week, key=lambda x: x[1])[1]
 
-        input('To go back press any key.')
-        model.clear_console()
+        if max_value_list1 > max_value_list2:
+            print(f"The longest streak from all habits is: {longest_streak_run_day[0][1]} days in habit:"
+                  f" {longest_streak_run_day[0][0]} from {longest_streak_run_day[0][2]}"
+                  f" to {longest_streak_run_day[0][3]}.")
+            input('\nTo go back press any key.')
+            model.clear_console()
+            return longest_streak_run_day[0][1]
+        else:
+            print(f"The longest streak from all habits is: {longest_streak_run_week[0][1]} weeks in habit:"
+                  f" {longest_streak_run_day[0][0]} in calendar weeks {longest_streak_run_day[0][0]}.")
+            input('\nTo go back press any key.')
+            model.clear_console()
+            return longest_streak_run_week[0][1]
+        # input('\nTo go back press any key.')
+        # model.clear_console()
 
     @staticmethod
     def calculate_longest_streak(check_offs, periodicity):
-        """Calculate the longest streak of check-offs for a given periodicity.
+        """Calculate the longest streak of completed habits.
 
         Args:
-            check_offs (list): List of check-off dates.
-            periodicity (str): The periodicity of the habit ('daily' or 'weekly').
+            check_offs (list): A list of strings representing completed dates in the format '%Y-%m-%dT%H:%M:%S.%f'.
+            periodicity (str): The periodicity of the habit; "daily" or "weekly".
 
         Returns:
-            tuple: (longest_streak, start_date, end_date)
+            tuple: A tuple containing the longest streak length, start date, and end date of the streak.
         """
-        sorted_dates = sorted([datetime.strptime(date_str, '%Y-%m-%dT%H:%M:%S.%f') for date_str in check_offs])
+
+        sorted_dates = sorted([datetime.strptime(date_str, '%Y-%m-%dT%H:%M:%S.%f').date() for date_str in check_offs])
 
         if periodicity == 'daily':
             streak_threshold = timedelta(days=1)
         else:
-            streak_threshold = timedelta(weeks=1)
+            return 0, None, None
 
         longest_streak = 0
-        current_streak = 0
-        longest_streak_start = None
-        current_streak_start = None
+        current_streak = 1
+        current_streak_start = sorted_dates[0]
 
         for i in range(1, len(sorted_dates)):
             if (sorted_dates[i] - sorted_dates[i - 1]) <= streak_threshold:
-                if current_streak == 0:
-                    current_streak_start = sorted_dates[i - 1]
                 current_streak += 1
             else:
                 if current_streak > longest_streak:
                     longest_streak = current_streak
                     longest_streak_start = current_streak_start
-                current_streak = 0
+                current_streak = 1
+                current_streak_start = sorted_dates[i]
 
         if current_streak > longest_streak:
             longest_streak = current_streak
             longest_streak_start = current_streak_start
 
-        if longest_streak_start:
-            longest_streak_end = longest_streak_start + streak_threshold * longest_streak
-            return longest_streak, longest_streak_start.date(), longest_streak_end.date()
-        else:
-            return 0, None, None
+        longest_streak_end = longest_streak_start + timedelta(days=longest_streak - 1)
+        # print(longest_streak, longest_streak_start, longest_streak_end)
+
+        return longest_streak, longest_streak_start, longest_streak_end

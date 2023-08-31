@@ -20,12 +20,10 @@ class Settings:
         self.log_out_file = log_out_file
 
     @staticmethod
-    def settings(habits, main_menu, database, log_out_file):
+    def settings(database, log_out_file):
         """Display and manage user settings related to habits.
 
         Args:
-            habits (list): List of user's habits.
-            main_menu (function): The main menu function for navigation.
             database (str): The path to the JSON database file containing user data.
             log_out_file (str): The path to the file storing last logout information.
         """
@@ -66,7 +64,7 @@ class Settings:
                                 selected_habit['Active'] = False
                                 print(f"\nYou've deactivated the habit: {selected_habit['Task']}")
                                 # Save the modified habits data back to the JSON file
-                                model.save_into_json_file(habits, database, indent_level=4)  # "database9.json"
+                                model.save_into_json_file(habits, database, indent_level=4)
                                 time.sleep(4)
                                 model.clear_console()
 
@@ -75,6 +73,7 @@ class Settings:
                                 print("Invalid choice. No habit was deactivated.")
                                 time.sleep(2)
                                 model.clear_console()
+                                pass
                         else:
                             model.clear_console()
                             print("\nContinuing without deactivating any habit.")
@@ -85,18 +84,14 @@ class Settings:
                         print("No active habits to deactivate.")
                         time.sleep(2)
                         break
-
-                    # main_menu()
-
                 elif user_choice == '2':
                     model.clear_console()
                     change_date = ChangeDate()
                     change_date.change_date(log_out_file)
                 elif user_choice == 'b':
                     model.clear_console()
-                    main_menu()
+                    return  # main_menu
                 else:
-                    # option6()
                     model.clear_console()
 
             except Exception as e:

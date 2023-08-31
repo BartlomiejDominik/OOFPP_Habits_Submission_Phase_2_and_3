@@ -1,9 +1,5 @@
 from datetime import datetime
 
-
-# Class prepared for adding a new habit
-
-
 class Habit:
     """A class for adding a new habit.
 
@@ -46,4 +42,3 @@ class Habit:
             str: A formatted string displaying habit details.
         """
         return f"Task: {self.task}\nSpecification: {self.specification}\nPeriodicity: {self.periodicity}"
-

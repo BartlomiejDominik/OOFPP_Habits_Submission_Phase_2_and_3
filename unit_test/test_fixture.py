@@ -5,7 +5,6 @@ from unit_test.dataset_for_test import Set
 from datetime import datetime, timedelta
 from functionalities.add_new_habit import AddNewHabit
 from functionalities.habits_check_off import CheckOff
-from functionalities.longest_run_streak import RunStreak
 import os
 
 
@@ -55,7 +54,7 @@ class TestFixture:
             log_out_file = "unit_test/test_log_out_time.json"
             start_init = StartInitialisation()
             start_init.start_initialisation(database, log_out_file)
-            # test if "test_database.json" and "test_log_out_time.json" were created
+            # test if "database.json" and "test_log_out_time.json" were created
             assert model.read_from_json_file(database) is not None
             assert model.read_from_json_file(log_out_file) is not None
             print('\n########## Test 1. Successfully completed! ##########\n')
@@ -69,8 +68,8 @@ class TestFixture:
             dataset.test_function(model.read_from_json_file(database), database)
             result_habits = model.read_from_json_file(database)
             # check if random check_off's were added to a database
-            for habit in result_habits:
-                assert len(habit['Check_offs']) is not None
+            assert any(len(habit['Check_offs']) != 0 for habit in result_habits)
+
             print('\n########## Test 2. Successfully completed! ##########\n')
             time.sleep(2)
             # check if adding a new habit 'Example' with class 'Habit' is working properly.
@@ -80,55 +79,67 @@ class TestFixture:
                   "properly. ##########\n")
             time.sleep(3)
             add_new_habit = AddNewHabit()
-            new_habit = add_new_habit.add_new_habit("Example", "Longest streak run", "daily", database, result_habits)
+            new_habit = add_new_habit.add_new_habit("Example", "Longest streak run",
+                                                    "daily", database, result_habits)
             print(new_habit)
             time.sleep(3)
             habits = model.read_from_json_file(database)
             assert any(task_dict['Task'] == 'Example' for task_dict in habits)
             print()
-            print(habits)
+            for habit in habits:
+                print(habit)
             time.sleep(3)
             print('\n########## Test 3. Successfully completed! ##########\n')
             time.sleep(3)
             model.clear_console()
             # check if check_off's id adding properly.
-            print("\n########## Test 4. Check if check_off's are added properly.  ##########\n")
-            option1 = CheckOff()
+            print("\n########## Test 4. Check if habit is checked_off properly.  ##########\n")
+            check_off = CheckOff()
             habit_task_to_find = 'Example'
             # Find the dictionary with the specified 'Task'
             found_habit = None
             for habit in habits:
                 if habit['Task'] == habit_task_to_find:
                     # print(habit)
-                    habits = option1.check_off_habit(habit, habits, database)
-            print(habits)
+                    habits, _ = check_off.check_off_habit(habit, habits, database)
+            for habit in habits:
+                print(habit)
             time.sleep(3)
-            assert len(habits[5]['Check_offs']) is not None
+            # habits[5]['Check_offs'] = []
+            assert len(habits[5]['Check_offs']) != 0
             print('\n########## Test 4. Successfully completed! ##########\n')
             time.sleep(3)
             model.clear_console()
             # add check off for the last 28 days to get the longest periodicity for the habit 'Example'
-            print("\n########## Test 5. Add check offs for last 28 days to 'Example' habit to see if analytic"
+            print("\n########## Test 5. Add check offs for last 28 days to 'Example' habit to see if analytic "
                   "works correctly."
                   "##########\n")
             # Create a list of dates for the last 28 days
-            last_28_days = [datetime.now() - timedelta(days=i) for i in range(0, 29)]
-
+            database = 'unit_test/test_database.json'
+            model = Utilities()
+            habits = model.read_from_json_file(database)
+            last_28_days = [datetime.now() - timedelta(days=i) for i in range(0, 28)]
             # Format the dates in the desired format
-            run_streak = RunStreak()
             formatted_dates = sorted([date.strftime("%Y-%m-%dT%H:%M:%S.%f") for date in last_28_days])
             habits[5]['Check_offs'] = formatted_dates
-            print()
-            print(habits[5])
+            assert len(habits[5]['Check_offs'])
+            model.save_into_json_file(habits, database)
+            habits = model.read_from_json_file(database)
+            for habit in habits:
+                print(habit)
+            # print(habits[5])
             time.sleep(3)
-            habits = tuple(habits)
-            # print(habits)
+            from functionalities.longest_run_streak import RunStreak
+            run_streak = RunStreak()
+            database = 'unit_test/test_database.json'
+            run_streak.the_longest_run_streak_for_habits(database)
+            print('\n########## Test 5. Successfully completed! ##########\n')
+            input('\nAll tests are completed successfully!!! Please press Enter to launch the application.\n')
 
-            run_streak.the_longest_run_streak_for_habits(habits)
             pass
 
         else:
-            print('do menu')
+            # launch main_menu
             model = Utilities()
             model.clear_console()
             return

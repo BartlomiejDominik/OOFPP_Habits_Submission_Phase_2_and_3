@@ -21,7 +21,6 @@ class AddNewHabit:
                 print('\nTo add a new habit please enter the following information.\n'
                       '\nTo brake and go back to main menu enter (b)\n')
                 new_habit_task = input('Please insert short task description for the new habit: ')
-                # .clear_console()
                 model.clear_console()
         except Exception as e:
             print('An error occurred:', e)
@@ -67,5 +66,5 @@ class AddNewHabit:
         model = Utilities()
         habit = Habit(new_habit_task, new_habit_specification, new_habit_periodicity, habits)
         habits.append(habit.set_new_habit())
-        model.save_into_json_file(habits, database, indent_level=4)  # "database9.json"
+        model.save_into_json_file(habits, database, indent_level=4)
         return habit

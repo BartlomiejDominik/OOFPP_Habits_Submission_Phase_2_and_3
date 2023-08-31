@@ -97,12 +97,15 @@ class CheckOff:
 
                                                         for habit in habits:
                                                             if habit['Id'] == target_id:
-                                                                check_off = datetime.now()
-                                                                found_habit = habit
-                                                                found_habit['Check_offs'].append(check_off)
-                                                                model.save_into_json_file(habits, database,
-                                                                                          indent_level=4)
-                                                                print(f"This habit was checked_off\n{found_habit}")
+
+                                                                _, found_habit = CheckOff.check_off_habit(habit, habits,
+                                                                                                          database)
+                                                                print("\nThis habit was checked_off:\n", "\n",
+                                                                      found_habit['Task'], "-",
+                                                                      found_habit['Specification'],
+                                                                      ", with periodicity: ",
+                                                                      found_habit['Periodicity'])
+                                                                time.sleep(3)
                                                                 break  # to save the check-off in database
                                                         break
                                                     else:
@@ -120,12 +123,6 @@ class CheckOff:
                                         time.sleep(.8)
                                         model.clear_console()
                                         break
-                                model.clear_console()
-                                # option1()
-                                pass
-
-                                check_off = datetime.now()
-                                print(type(check_off))  # check how to find a type of this data.
                                 model.clear_console()
                                 break
                             pass  # option1()
@@ -156,4 +153,4 @@ class CheckOff:
         found_habit['Check_offs'].append(check_off)
         model.save_into_json_file(habits, database,
                                   indent_level=4)
-        return habits
+        return habits, found_habit

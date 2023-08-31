@@ -1,4 +1,4 @@
-import time  # to delay the execution of the functions f.e in main_menu()
+import time
 from functionalities.analytics import Analytics
 from functionalities.close_app import CloseApp
 from functionalities.help_navigation import HelpNavigation
@@ -79,12 +79,13 @@ def choose_one_option():
         main_menu()
 
     elif user_choice == "s":
-        settings.settings(habits, main_menu, database, log_out_file)
-        settings.settings(habits, main_menu, database, log_out_file)
-        settings.settings(habits, main_menu, database, log_out_file)
+        settings.settings(database, log_out_file)
+        main_menu()
+
     elif user_choice == "print":
         for habit in habits:
             print(habit)
+
     else:
         utilities.clear_console()
         main_menu()
