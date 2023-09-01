@@ -1,40 +1,38 @@
 # This repository contains a beta version of the HabiBart application created to help users define and track their habits.
+## 1. Distribution:![1](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f87d42c6-ff8b-4b9e-b8f6-3037193341c9)
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/9557a60a-f39c-4a04-b03a-b659216b9b04)
-
-## 1. Distribution:
 The application will be delivered as a compressed zip file containing the executable file and all subfolders.
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7397c525-bbe9-48ba-88ee-c190b9befad9" alt="Image" width="600" height="400">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/15ff28bc-3f46-4b73-bb8d-f37a21039972" alt="Image" width="600" height="400">
 
 Figure 1. Structure of the files in main folder
 
 ## 2. Data storage:
 All the data is stored in JSON files. The database is a list of dictionaries, with each habit represented as one dictionary with attributes.
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4bc418f1-7f0d-4b5a-885e-d872e181dcf9" alt="Image" width="600" height="600"></b>
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/ffab3168-74b2-47b8-a240-28d6b7f1651f" alt="Image" width="600" height="600"></b>
 
 Figure 2. Data structure in the database.json file
 
 ## 3. Launch:
 Due to the early stage of development of this application, users will be asked, after launching the executable file, whether they should run the test fixture or proceed directly to the main menu.
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/bde2b7f3-c462-435a-8a64-b176b2ec926c" alt="Image" width="400" height="100">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/ca4470ed-256d-41db-8c9c-45997dea6f72" alt="Image" width="400" height="100">
 
 Figure 3. Starting sequence of the application
 
 ## 3.1 Launch.Test:
 The user should type 't' and press Enter to initiate the test run. Subsequently, messages will be prompted, providing information about the current stage of this process, and the user will be presented with sample data. At certain points in this process, user interaction (pressing Enter to proceed) is required. This functionality is designed to enable progress tracking throughout the testing process.
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/56f97edf-442e-46c1-9675-003909614ff9" alt="Image" width="600" height="400">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/abbb4dbb-d788-4f40-ad8e-4cb1daba45ad" alt="Image" width="600" height="400">
 
 Figure 4. Introduction to the first test
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/33832cb1-8aeb-4c75-aa96-8b9be654be0c" alt="Image" width="400" height="100">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/9efc3b74-93e6-43f5-924b-409932290853" alt="Image" width="400" height="100">
 
-Figure 5. Example window screen from test fixture lauch
+Figure 5. Example window screen from test fixture
 
-<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b0294899-3a58-4e6f-a31e-e3207cc9e981" alt="Image" width="600" height="400">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/6122431c-159b-4fe0-94ff-1d0d3bb1766f" alt="Image" width="600" height="400">
 
 Figure 6. The last test results screen
 
@@ -56,27 +54,27 @@ For example, a part of the code tests if the creation of a dataset, based on fiv
 ## 3.2 Launch.Menu:
 During the first run and after completing the tests, or discarding them at the beginning, the application will check if the database and log_out file exist. If not, these will be created with five predefined habits. The last log_out_date is set to be two days earlier to demonstrate how user notifications about incomplete habits work. These two steps occur only if any of the files are missing
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/227a0ce5-a3a9-43ab-ae2f-95f568f480e0)
+![8](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/20392cce-f6b2-47ed-9da7-16c682e6e44f)
 
-Figure 7. Launch testing proceder screen: database.json file not found
+Figure 7. Launch menu testing proceder screen1: database.json file not found
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/92bc2d52-061e-4698-8996-5a51f037c34c)
+![9](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/89a98578-d049-4991-b151-2f60108291da)
 
-Figure 8. Launch testing proceder screen: log_out_time.json file not found
+Figure 8. Launch menu testing proceder screen2: log_out_time.json file not found
 
 ## 4 Menu:
 This is the place where the user can choose from available functions by typing the predefined letter. Based on both files 'database.json' and 'log_out_time.json' (set by default two days earlier for presentation purposes), the user is prompted in the upper part of the menu with habits that have not been completed since the last log-out. If the last log_out was earlier on the same day, it will not be considered, and this part of the menu will be empty.
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7f780910-a8b0-4f88-8f66-56dd5dafc8a3)
+![10](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/62e9cb04-0e29-4def-a3ae-55c3c4213ba4)
 
 Figure 9. Main menu layout
 
 ## 4.1 Menu.Help(h):
 This is the place prepered for the user_manual.
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/379798ca-11e4-42f9-80ce-8b1bdf3a5291)
+![11](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b3175145-020c-48b2-bcb1-ac83c7cece60)
 
-Figure 10. Main menu layout
+Figure 10. User_help layout
 
 ## 4.2 Menu.Check_off_habit(c):
 In this part, the user has the possibility to check off any active habits that have not yet been completed for the day or week. The logic here is based on two variables: 'Active' (boolean) and 'Periodicity' ('daily' or 'weekly'). For instance, if an active habit with weekly periodicity already has a check-off mark in the database for Monday, it will not appear in the list of habits to be completed until the following week.
@@ -95,43 +93,44 @@ for habit in not_completed_habits_week:
         pass
 </pre>
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/95d00d33-fd34-4205-aeef-2f7e2539b239)
+![12](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7a6dd0be-7a3f-41ca-8683-72cc290df44f)
 
 Figure 11. Check off habit interface
 
 ## 4.3 Menu.Add_new_habit(n):
 This is the place to add new habits to the existing default habits in the database.
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f875d8e4-0d04-4735-b829-9379139e86b9)
+![13](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f01d3fa7-cf7a-4241-8ec3-a46e413f5a5b)
 
 Figure 12. Adding new habit interface
 
 ## 4.4 Menu.Analytics(a):
 User can choose betwenn two predefind options:
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/fc1f976a-8cb0-446d-a4e4-9df20a15ef38)
+
+![14](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/137ca4ad-3735-4524-9c3c-44fc5663d1a7)
 
 Figure 13. Analytics menu layout
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/8b15a0e5-339d-4608-a211-a71c399f5517)
+![15](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/10bc1eff-7788-43ce-87aa-d27e71f91a3b)
 
 Figure 14. Analytics/All active habits
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/68de086f-fe01-4290-bfd5-aba0054bcee8)
+![16](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/0045f95e-0b61-47c5-9af7-b82667963070)
 
 Figure 15. Analytics/Longest run streaks for each habit
 
 ## 4.5 Menu.Settings(s):
 Here, users can deactivate existing habits by selecting them from the list. Upon deactivation, the 'Active' parameter in the database will be changed from 'True' to 'False'. The second option in this menu is designed to modify the last log_out time. This option is intended solely for testing purposes, such as setting a date in the past to display incomplete habits in the main menu.  
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f89c36ff-1ae4-4a45-ab2e-53a063c40050)
+![17](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/3d770bda-4219-4c6a-9f52-79f207df3b34)
 
 Figure 16. Settings menu layout
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/7ffd61f0-0d79-40ae-90b5-ac5eeeb8ea0b)
+![18](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/38d206fd-65b1-474f-af34-7466195fe693)
 
 Figure 17. Interface to deactivate a habit
 
-![image](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/32f9c44c-f2f9-4fc3-bb30-29815d919a90)
+![19](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/be6e6f70-f6ca-43b8-a0ef-86123bb5e75e)
 
 Figure 18. Example of the deactivated habit in database file 
 
