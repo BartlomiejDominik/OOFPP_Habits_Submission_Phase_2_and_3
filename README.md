@@ -34,9 +34,7 @@ Figure 4. Introduction to the first test
 
 Figure 5. Example window screen from test fixture
 
-<img src="7.png
-
-" alt="Image" width="600" height="400">
+<img src="https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/3913a5e5-aedc-4504-a588-92f5ce88a0a9" alt="Image" width="600" height="400">
 
 Figure 6. The last test results screen
 
@@ -60,7 +58,6 @@ During the first run and after completing the tests, or discarding them at the b
 
 ![8](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/bee11a63-1435-4671-9eae-e85182de47cc)
 
-
 Figure 7. Launch menu testing proceder screen1: database.json file not found
 
 ![9](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/2939805b-9f5f-41c6-b0fc-9bf8af515369)
@@ -72,14 +69,12 @@ This is the place where the user can choose from available functions by typing t
 
 ![10](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/fe2e44bc-cc3f-4168-98f9-1224d26f9795)
 
-
 Figure 9. Main menu layout
 
 ## 4.1 Menu.Help(h):
 This is the place prepered for the user_manual.
 
 ![11](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/637d90ec-9e81-4e0d-8096-2385e0042d1e)
-
 
 Figure 10. User_help layout
 
@@ -102,14 +97,12 @@ for habit in not_completed_habits_week:
 
 ![12](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/b6f41f86-b6bf-4b19-97e3-dbda5ad6f315)
 
-
 Figure 11. Check off habit interface
 
 ## 4.3 Menu.Add_new_habit(n):
 This is the place to add new habits to the existing default habits in the database.
 
 ![13](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/77465ec2-21df-40cb-ae49-8ada6c43baa0)
-
 
 Figure 12. Adding new habit interface
 
@@ -118,16 +111,13 @@ User can choose betwenn two predefind options:
 
 ![14](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/12a5d097-22e2-46c7-8cc0-b066c3006a97)
 
-
 Figure 13. Analytics menu layout
 
 ![15](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/80873883-ddce-41c8-9f4d-08ba684c0bc3)
 
-
 Figure 14. Analytics/All active habits
 
-16.png
-
+![16](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/d73eb112-863d-4a55-8384-b9832662fe6e)
 
 Figure 15. Analytics/Longest run streaks for each habit
 
@@ -136,14 +126,13 @@ Here, users can deactivate existing habits by selecting them from the list. Upon
 
 ![17](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/da910dac-4db5-42f3-9a55-d1010c68937a)
 
-
 Figure 16. Settings menu layout
 
-![18](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/38d206fd-65b1-474f-af34-7466195fe693)
+![18](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/4ff0a4b0-6d59-4ea2-a60b-dabedc0f2b16)
 
 Figure 17. Interface to deactivate a habit
 
-![19](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/be6e6f70-f6ca-43b8-a0ef-86123bb5e75e)
+![19](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/9b545dc6-4d01-47ac-aaa8-e23169edc87d)
 
 Figure 18. Example of the deactivated habit in database file 
 
