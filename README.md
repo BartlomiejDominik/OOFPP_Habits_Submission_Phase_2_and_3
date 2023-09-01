@@ -1,5 +1,6 @@
 # This repository contains a beta version of the HabiBart application created to help users define and track their habits.
-## 1. Distribution:![1](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f87d42c6-ff8b-4b9e-b8f6-3037193341c9)
+![1](https://github.com/BartlomiejDominik/OOFPP_Habits_Submission_Phase_2_and_3/assets/140627512/f87d42c6-ff8b-4b9e-b8f6-3037193341c9)
+## 1. Distribution:
 
 The application will be delivered as a compressed zip file containing the executable file and all subfolders.
 
